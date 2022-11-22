@@ -1,0 +1,143 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Declare variables */
+:root {
+    --white:  #FFF;
+    --light-yellow:  #FAF8D4;
+    --almond:  #EBDCCB;
+    --prussian-blue:  #18314f;
+}
+
+/* Global Rules */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Inter, sans-serif;
+    font-size: 15px;
+    background: -webkit-linear-gradient(90deg, rgb(255, 147, 15) 0%, rgb(255, 250, 92) 100%);
+}
+
+/* Main page */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 4em 0px;
+}
+
+.todo-main {
+    background-color: var(--white);
+    width: 30em;
+    max-width: 90%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+/* Header */
+
+.todo-main header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.8em;
+}
+
+.todo-main h1 {
+    font-weight: 900;
+    color: var(--prussian-blue);
+}
+
+.todo-main div {
+    display: flex;
+    gap: 1em;
+}
+
+.empty {
+    opacity: 0.5;
+}
+
+.todo-main div button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Lists */
+
+.todo-main ul {
+    flex: 1 1 0%;
+    margin: 2em 0px;
+    list-style: none;
+    overflow: auto;
+}
+
+.todo-main ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-yellow);
+    margin-bottom: 1em;
+    padding: 0.7em 1em;
+    border-radius: 5em;
+}
+
+.todo-main ul li p {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--prussian-blue);
+}
+
+.todo-main ul li button {
+    cursor: pointer;
+    color: var(--prussian-blue);
+    font-size: 1.2em;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+/* Form */
+
+.todo-main form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.todo-main form input, .todo-main form button {
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.todo-main form input {
+    color: var(--prussian-blue);
+    border: 2px solid var(--prussian-blue);
+    outline: none;
+}
+
+
+.todo-main form button {
+    background-color: rgb(34, 108, 224);
+    color: var(--white);
+    cursor: pointer;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
